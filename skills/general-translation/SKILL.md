@@ -52,6 +52,7 @@ Translate for meaning, tone, and readability.
 - Rewrite abstract explanatory prose so it reads like something a person would naturally say or write.
 - When two phrasings are equally faithful, choose the one that sounds like original writing in the target language, not translated copy.
 - In product-help or interface-adjacent prose, avoid formal nouns and repeated verb structure if a shorter native phrasing says the same thing.
+- Translate process-oriented outcome clauses as direct user outcomes when the literal process framing sounds unnatural. For example, render `agar proses ... berjalan lancar` as `so you can ... without any issues`, not `so you can ... smoothly`.
 
 Prefer:
 
@@ -59,6 +60,7 @@ Prefer:
 - `tempat untuk berbagi ...`
 - `refleksi berisi wawasan ...`
 - `Tap "Continue" to return to your last lesson.`
+- `so you can sign back in without any issues`
 - direct, flowing sentence structure
 
 Over:
@@ -66,6 +68,7 @@ Over:
 - `Mengeklik ... akan ...`
 - `platform untuk ...` when it adds no value
 - `enter the learning room to continue the last lesson`
+- `so you can sign back in smoothly`
 - accurate but flat sentence structure
 
 ## Final Check
