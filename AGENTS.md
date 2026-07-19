@@ -31,6 +31,7 @@
 - Read `DECISIONS.md` before changing public scope or architecture.
 - If present, read `.local/PRD.md` and `.local/ROADMAP.md` before expanding
   product surfaces or skill categories.
+- If present, read `.local/WORKFLOW.md` for maintainer-local execution rules.
 - Refine skills through sample -> score -> finding -> narrow revision.
 - Revise for repeated weaknesses, not isolated wording preferences.
 - Keep public changes focused and explain validation in the pull request.
