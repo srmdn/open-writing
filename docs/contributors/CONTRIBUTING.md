@@ -14,6 +14,7 @@ This repo keeps audience-specific documentation separate:
 Public repo content:
 
 - `AGENTS.md`
+- `DECISIONS.md`
 - `docs/contributors/CONTRIBUTING.md`
 - `docs/contributors/README.md`
 - `docs/end-users/README.md`

@@ -49,6 +49,7 @@ That means the intended model is:
 - End users: [docs/end-users/README.md](./docs/end-users/README.md)
 - Contributors: [docs/contributors/README.md](./docs/contributors/README.md)
 - Contribution policy: [docs/contributors/CONTRIBUTING.md](./docs/contributors/CONTRIBUTING.md)
+- Project decisions: [DECISIONS.md](./DECISIONS.md)
 
 ## How To Use
 
@@ -86,6 +87,7 @@ skills/
   <skill-name>/
     SKILL.md
 AGENTS.md
+DECISIONS.md
 docs/
   contributors/
     CONTRIBUTING.md

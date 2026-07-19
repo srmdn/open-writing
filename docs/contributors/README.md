@@ -31,6 +31,7 @@ Future surfaces may include `mcp/`, `web/`, or shared core modules, but contribu
 
 Check:
 
+- does this conflict with a recorded [project decision](../../DECISIONS.md)?
 - does this belong in an existing skill, or is it a different failure mode?
 - does this increase overlap with a sibling skill?
 - is this rule public and reusable, or only local/private workflow?
