@@ -84,6 +84,18 @@ Use this rule of thumb:
 3. If you are using a local eval workspace, add or update a case or run note.
 4. If a skill is improved but not fully proven stable, mark it as monitored rather than pretending it is finished.
 
+## Automated validation
+
+Before you open a pull request, validate the public skill structure:
+
+```shell
+python3 .github/validate-skills.py
+```
+
+The validator checks that every skill has a non-empty `SKILL.md`, includes
+the required frontmatter fields, and uses the same name as its directory.
+GitHub Actions runs the same check for every pull request and change to `main`.
+
 ## Model Notes
 
 Model choice matters for contributors because it changes how well a skill follows instructions, preserves structure, and produces natural translation. Do not assume that results from one strong model automatically generalize to weaker ones.
