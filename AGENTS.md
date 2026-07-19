@@ -40,6 +40,60 @@
 - Prefer eval-driven refinement: real sample -> score -> findings -> skill update
 - Do not treat a skill as solid just because the `SKILL.md` reads well; it must survive evaluation
 
+## Autonomous contribution workflow
+
+Use this workflow automatically for any authorized task that produces public
+tracked changes. Once the user asks for a change, complete the routine
+branch-to-merge lifecycle without asking for separate prompts between steps. A
+user instruction to avoid commits, pushes, pull requests, or merges overrides
+this default.
+
+1. Start from an up-to-date `main`.
+2. Before editing, create a short-lived branch named
+   `codex/<short-task-name>`. If already on the correct task branch, continue
+   there.
+3. Read the relevant public files and private anchors before changing scope or
+   skill behavior.
+4. Make the smallest change that solves the evidenced problem.
+5. For meaningful skill changes:
+   - add or update a private eval case or run note when `.local/eval/` is
+     available
+   - run a clean follow-up after a behavior revision
+   - revise again only when evidence still shows a repeated weakness
+6. Run validation proportional to the change, including skill validation,
+   format checks, tests, lint, or eval scoring when available.
+7. If validation fails, keep working on the same branch until it passes or a
+   genuine blocker requires user input.
+8. Stage only task-scoped public files. Never stage `.local/` or unrelated user
+   changes.
+9. Commit with a concise descriptive message, then push the task branch.
+10. Open a ready pull request that explains:
+    - the problem
+    - why the change belongs in its current scope
+    - validation performed
+    - relevant eval outcome without exposing private eval material
+11. Monitor required checks and review state. Fix failures on the same branch
+    and push follow-up commits automatically.
+12. Merge into `main` when checks pass, no unresolved review issue remains, and
+    the final diff is still task-scoped. Prefer squash merge unless repo policy
+    or the user requests another strategy.
+13. Delete the merged task branch when practical, switch back to `main`, update
+    it, and verify the worktree is clean.
+
+Do not pause for routine branch creation, validation, staging, commits, pushes,
+pull-request creation, check monitoring, or merge after the original change
+request authorizes the workflow. Pause only when:
+
+- credentials or tool approval are unavailable
+- a destructive or irreversible action falls outside the requested scope
+- requirements are materially ambiguous
+- validation exposes a product decision the agent cannot safely make
+- merge conflicts or review feedback require user judgment
+
+Keep `main` as the healthy baseline. Do not commit public work directly to
+`main` unless the user explicitly requests it or an established emergency
+policy requires it.
+
 ## Editing Rules
 
 - Preserve existing skill names unless intentionally renaming with repo-wide follow-through
