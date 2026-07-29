@@ -53,6 +53,8 @@ Review a translation before treating it as final.
   essay prose
 - abstract English-to-Indonesian concept transfer that is grammatical but not
   idiomatic, such as `menyelesaikan niat`
+- generic transition scaffolding that makes prose read like a polished outline
+  rather than a written article
 
 ## Output Style
 

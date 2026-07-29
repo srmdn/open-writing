@@ -48,6 +48,9 @@ Improve text that sounds machine-made or generically AI-written.
 - cute metaphors that flatten technical meaning (`model diberi tangan`,
   `sistem operasi kecil untuk niat manusia`) unless the surrounding prose earns
   them
+- generic transition scaffolding (`Di sinilah...`, `Itulah sebabnya...`,
+  `Tetapi pola besarnya...`) when the sentence merely announces structure
+  instead of adding a concrete observation
 
 ## Useful Rewrite Patterns
 
@@ -70,6 +73,9 @@ Improve text that sounds machine-made or generically AI-written.
   menjalankan code.`
 - `Itu sudah besar.` -> expand only if it carries a real observation, or cut it
   when it only adds dramatic pause
+- `Di sinilah konsep tool use menjadi penting.` ->
+  `Di titik ini, tool use menjadi pembeda.` or a more specific sentence tied to
+  the surrounding paragraph
 
 ## Final Check
 

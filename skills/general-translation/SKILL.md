@@ -64,6 +64,10 @@ Translate for meaning, tone, and readability.
   idea more concretely, such as `mengerjakan tugas` or `menjalankan instruksi`.
 - Watch for dramatic but generic one-line paragraphs. Keep them only when they
   add voice, not when they merely imitate essay rhythm.
+- Avoid transition scaffolding that sounds like an outline marker. Replace
+  generic pivots such as `Di sinilah...`, `Itulah sebabnya...`, or `Tetapi pola
+  besarnya...` with a concrete observation when the sentence does not add new
+  meaning.
 - For product or cultural concepts, choose the term that names the real object,
   not the literal UI part. Example: use `chatbot` for conversational AI products
   such as ChatGPT; use `chatbox` only when specifically referring to the input
