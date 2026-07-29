@@ -59,6 +59,11 @@ Translate for meaning, tone, and readability.
 - In Indonesian technical-popular prose, keep the tone mature and readable.
   Avoid over-formal abstract transitions when a natural editorial phrase says
   the same thing.
+- Avoid importing English-thesis phrasing too literally into Indonesian. If a
+  phrase like `completing intentions` becomes `menyelesaikan niat`, rewrite the
+  idea more concretely, such as `mengerjakan tugas` or `menjalankan instruksi`.
+- Watch for dramatic but generic one-line paragraphs. Keep them only when they
+  add voice, not when they merely imitate essay rhythm.
 - For product or cultural concepts, choose the term that names the real object,
   not the literal UI part. Example: use `chatbot` for conversational AI products
   such as ChatGPT; use `chatbox` only when specifically referring to the input
@@ -76,6 +81,7 @@ Prefer:
 - `jalannya tidak pernah mulus`
 - `dipakai sehari-hari`
 - `chatbot` when the topic is the conversational AI experience
+- `mengerjakan tugas`
 
 Over:
 
@@ -88,6 +94,7 @@ Over:
 - `perjalanannya tidak lurus`
 - `digunakan dalam kehidupan sehari-hari`
 - `chatbox` when the intended meaning is the chatbot product or experience
+- `menyelesaikan niat`
 
 ## Final Check
 

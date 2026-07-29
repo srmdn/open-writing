@@ -39,6 +39,15 @@ Improve text that sounds machine-made or generically AI-written.
 - mixed English-Indonesian phrasing that feels pasted together
 - precise-looking English terms used for the wrong object, such as `chatbox`
   when the sentence means the `chatbot` experience rather than the UI box
+- staccato manifesto rhythm: short declarative lines that sound profound but do
+  not add texture (`Itu sudah besar.`, `Tiga kata itu penting.`)
+- repetitive capability ladders (`Ia bisa... Ia bisa... Ia bisa...`) when a
+  compressed sentence or grouped list would sound more human
+- pseudo-deep abstraction carried over from English (`menyelesaikan niat`,
+  `titik ketika ceritanya bergeser`) when a concrete phrase is clearer
+- cute metaphors that flatten technical meaning (`model diberi tangan`,
+  `sistem operasi kecil untuk niat manusia`) unless the surrounding prose earns
+  them
 
 ## Useful Rewrite Patterns
 
@@ -54,6 +63,13 @@ Improve text that sounds machine-made or generically AI-written.
 - `era AI modern dimulai dari chatbox` ->
   `era AI modern dimulai dari chatbot` when the point is the conversational AI
   product or interaction pattern
+- `AI bergerak dari menjawab pertanyaan menuju menyelesaikan niat.` ->
+  `AI bergerak dari menjawab pertanyaan menuju mengerjakan tugas.`
+- `Ia bisa membaca file. Ia bisa mencari informasi. Ia bisa menjalankan code.` ->
+  `Model mulai diberi akses ke tool: membaca file, mencari informasi, dan
+  menjalankan code.`
+- `Itu sudah besar.` -> expand only if it carries a real observation, or cut it
+  when it only adds dramatic pause
 
 ## Final Check
 
