@@ -32,6 +32,9 @@ Translate developer documentation without breaking code, structure, or terminolo
 - Keep technical terminology consistent within the file.
 - Avoid stacking too many English words into one untranslated phrase when the surrounding prose can be localized more naturally.
 - If project-visible labels such as admonition tags or heading conventions are ambiguous, follow the file's existing convention instead of localizing inconsistently.
+- For Indonesian developer-facing prose, prefer the term used by the technical
+  community over a dictionary-like Indonesian equivalent when the English term
+  is clearer or more idiomatic.
 
 ## Typical Inputs
 
@@ -55,6 +58,9 @@ Translate developer documentation without breaking code, structure, or terminolo
 - Avoid literal carryover such as `membuat scaffold` when a more natural phrase is available.
 - Reduce mixed-language phrase stacking when a short Indonesian frame keeps the developer meaning just as clear.
 - When a conceptual phrase sounds literal after translation, rewrite the surrounding sentence so it matches how developers actually describe the idea in the target language.
+- When several English technical terms appear in one paragraph, add natural
+  Indonesian framing so the prose does not become English nouns with Indonesian
+  verbs attached.
 
 Prefer:
 
@@ -63,6 +69,9 @@ Prefer:
 - `menyiapkan struktur awal proyek`
 - `wizard setup berbasis command line`
 - `struktur data yang konsisten`
+- `neural network` when the article targets developers or AI practitioners
+- `Di recommendation system, ...` instead of starting every sentence with a
+  bare English technical noun
 
 Over:
 
@@ -70,10 +79,14 @@ Over:
 - `command line setup wizard`
 - `membuat scaffold proyek`
 - `bentuk yang konsisten`
+- `jaringan saraf` when it sounds like a dictionary choice for the audience
+- stacked phrasing such as `Recommendation system memilih... Machine translation
+  mengubah... Voice assistant menerima...`
 
 ## Final Check
 
 - Is the structure intact?
 - Is the prose natural for developers in the target language?
 - Were code-sensitive regions preserved exactly?
-- Are English technical terms used intentionally rather than piled together awkwardly in prose?
+- Are English technical terms used intentionally rather than piled together
+  awkwardly in prose?

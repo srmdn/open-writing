@@ -22,7 +22,9 @@ Review a translation before treating it as final.
 3. Check domain-specific terminology.
 4. Check structure-sensitive tokens and formatting.
 5. Check whether the text sounds human or machine-made.
-6. Suggest fixes only where needed.
+6. For Indonesian technical or editorial prose, check whether the rhythm sounds
+   originally written in Indonesian rather than merely cleaned up.
+7. Suggest fixes only where needed.
 
 ## Review Inputs
 
@@ -40,9 +42,16 @@ Review a translation before treating it as final.
 - broken placeholders or formatting
 - inconsistent terms
 - AI-sounding polish or filler
+- dictionary-like technical terms when the audience would expect the English
+  term
+- mixed English-Indonesian phrasing that preserves terms but loses natural
+  sentence flow
+- correct Indonesian sentences that still sound translated or over-smoothed
 
 ## Output Style
 
 - concise findings first
 - examples of better phrasing when useful
 - preserve what is already good
+- call out terminology tradeoffs instead of forcing every English technical term
+  into Indonesian
