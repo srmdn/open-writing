@@ -53,6 +53,12 @@ Translate for meaning, tone, and readability.
 - When two phrasings are equally faithful, choose the one that sounds like original writing in the target language, not translated copy.
 - In product-help or interface-adjacent prose, avoid formal nouns and repeated verb structure if a shorter native phrasing says the same thing.
 - Translate process-oriented outcome clauses as direct user outcomes when the literal process framing sounds unnatural. For example, render `agar proses ... berjalan lancar` as `so you can ... without any issues`, not `so you can ... smoothly`.
+- For Indonesian articles or essays, check the local sentence rhythm. Prefer
+  phrasing that sounds originally written in Indonesian, not just correct
+  Indonesian.
+- In Indonesian technical-popular prose, keep the tone mature and readable.
+  Avoid over-formal abstract transitions when a natural editorial phrase says
+  the same thing.
 
 Prefer:
 
@@ -62,6 +68,9 @@ Prefer:
 - `Tap "Continue" to return to your last lesson.`
 - `so you can sign back in without any issues`
 - direct, flowing sentence structure
+- `bahkan sampai sekarang`
+- `jalannya tidak pernah mulus`
+- `dipakai sehari-hari`
 
 Over:
 
@@ -70,6 +79,9 @@ Over:
 - `enter the learning room to continue the last lesson`
 - `so you can sign back in smoothly`
 - accurate but flat sentence structure
+- `bahkan sekarang` when `bahkan sampai sekarang` sounds more natural
+- `perjalanannya tidak lurus`
+- `digunakan dalam kehidupan sehari-hari`
 
 ## Final Check
 
