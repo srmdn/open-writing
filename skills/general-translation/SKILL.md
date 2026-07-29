@@ -59,6 +59,10 @@ Translate for meaning, tone, and readability.
 - In Indonesian technical-popular prose, keep the tone mature and readable.
   Avoid over-formal abstract transitions when a natural editorial phrase says
   the same thing.
+- For product or cultural concepts, choose the term that names the real object,
+  not the literal UI part. Example: use `chatbot` for conversational AI products
+  such as ChatGPT; use `chatbox` only when specifically referring to the input
+  box or chat UI element.
 
 Prefer:
 
@@ -71,6 +75,7 @@ Prefer:
 - `bahkan sampai sekarang`
 - `jalannya tidak pernah mulus`
 - `dipakai sehari-hari`
+- `chatbot` when the topic is the conversational AI experience
 
 Over:
 
@@ -82,6 +87,7 @@ Over:
 - `bahkan sekarang` when `bahkan sampai sekarang` sounds more natural
 - `perjalanannya tidak lurus`
 - `digunakan dalam kehidupan sehari-hari`
+- `chatbox` when the intended meaning is the chatbot product or experience
 
 ## Final Check
 
