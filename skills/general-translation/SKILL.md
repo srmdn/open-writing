@@ -68,6 +68,10 @@ Translate for meaning, tone, and readability.
   generic pivots such as `Di sinilah...`, `Itulah sebabnya...`, or `Tetapi pola
   besarnya...` with a concrete observation when the sentence does not add new
   meaning.
+- In builder/productivity prose, do not let abstract nouns carry the paragraph
+  alone. Terms like `leverage`, `taste`, `jarak ide dan eksekusi`, and `draft
+  pertama` should be grounded in specific work: a file opened, an error read, a
+  draft reviewed, a test run, a scope decision, or a UI/prototype changed.
 - For product or cultural concepts, choose the term that names the real object,
   not the literal UI part. Example: use `chatbot` for conversational AI products
   such as ChatGPT; use `chatbox` only when specifically referring to the input
@@ -86,6 +90,7 @@ Prefer:
 - `dipakai sehari-hari`
 - `chatbot` when the topic is the conversational AI experience
 - `mengerjakan tugas`
+- concrete builder details before broad productivity claims
 
 Over:
 
@@ -99,6 +104,7 @@ Over:
 - `digunakan dalam kehidupan sehari-hari`
 - `chatbox` when the intended meaning is the chatbot product or experience
 - `menyelesaikan niat`
+- slogan-like productivity claims without a work example
 
 ## Final Check
 

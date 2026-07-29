@@ -51,6 +51,9 @@ Improve text that sounds machine-made or generically AI-written.
 - generic transition scaffolding (`Di sinilah...`, `Itulah sebabnya...`,
   `Tetapi pola besarnya...`) when the sentence merely announces structure
   instead of adding a concrete observation
+- builder/productivity abstraction slop: polished concepts such as `leverage`,
+  `taste`, `jarak ide dan eksekusi`, or `ide punya bentuk` repeated without
+  grounding in concrete work, tools, screens, errors, drafts, or decisions
 
 ## Useful Rewrite Patterns
 
@@ -76,6 +79,11 @@ Improve text that sounds machine-made or generically AI-written.
 - `Di sinilah konsep tool use menjadi penting.` ->
   `Di titik ini, tool use menjadi pembeda.` or a more specific sentence tied to
   the surrounding paragraph
+- `Software sejak awal adalah mesin leverage.` ->
+  explain the actual mechanism (`kita menulis instruksi sekali, lalu mesin
+  mengulanginya sebanyak yang dibutuhkan`) or cut the slogan
+- `Selama ide masih di kepala, ia terasa indah dan rapuh.` ->
+  `Selama masih di kepala, ide bisa tampak mulus karena belum diuji oleh detail.`
 
 ## Final Check
 

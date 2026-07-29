@@ -55,6 +55,8 @@ Review a translation before treating it as final.
   idiomatic, such as `menyelesaikan niat`
 - generic transition scaffolding that makes prose read like a polished outline
   rather than a written article
+- abstract builder/productivity claims that sound elegant but are not grounded
+  in concrete actions, artifacts, or decisions
 
 ## Output Style
 
