@@ -37,6 +37,8 @@ Improve text that sounds machine-made or generically AI-written.
 - technical terms translated even though the English term is more natural for
   the intended audience
 - mixed English-Indonesian phrasing that feels pasted together
+- precise-looking English terms used for the wrong object, such as `chatbox`
+  when the sentence means the `chatbot` experience rather than the UI box
 
 ## Useful Rewrite Patterns
 
@@ -49,6 +51,9 @@ Improve text that sounds machine-made or generically AI-written.
 - `Jaringan saraf ... kembali menguat` ->
   `Neural network ... kembali naik daun` when the audience is technical and the
   English term is more idiomatic
+- `era AI modern dimulai dari chatbox` ->
+  `era AI modern dimulai dari chatbot` when the point is the conversational AI
+  product or interaction pattern
 
 ## Final Check
 

@@ -47,6 +47,8 @@ Review a translation before treating it as final.
 - mixed English-Indonesian phrasing that preserves terms but loses natural
   sentence flow
 - correct Indonesian sentences that still sound translated or over-smoothed
+- near-miss technical terms that change the object being discussed, such as
+  `chatbox` for a conversational AI product where `chatbot` is intended
 
 ## Output Style
 

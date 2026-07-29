@@ -61,6 +61,9 @@ Translate developer documentation without breaking code, structure, or terminolo
 - When several English technical terms appear in one paragraph, add natural
   Indonesian framing so the prose does not become English nouns with Indonesian
   verbs attached.
+- Distinguish product/concept terms from UI component terms. Use `chatbot` for a
+  conversational AI system or product experience; reserve `chatbox` for the
+  visible chat input/container in an interface.
 
 Prefer:
 
@@ -72,6 +75,7 @@ Prefer:
 - `neural network` when the article targets developers or AI practitioners
 - `Di recommendation system, ...` instead of starting every sentence with a
   bare English technical noun
+- `era AI modern terasa dimulai dari chatbot`
 
 Over:
 
@@ -82,6 +86,8 @@ Over:
 - `jaringan saraf` when it sounds like a dictionary choice for the audience
 - stacked phrasing such as `Recommendation system memilih... Machine translation
   mengubah... Voice assistant menerima...`
+- `era AI modern terasa dimulai dari chatbox` when the meaning is the product or
+  interaction pattern, not the UI box
 
 ## Final Check
 
