@@ -49,6 +49,10 @@ Review a translation before treating it as final.
 - correct Indonesian sentences that still sound translated or over-smoothed
 - near-miss technical terms that change the object being discussed, such as
   `chatbox` for a conversational AI product where `chatbot` is intended
+- repeated declarative cadence that looks polished but reads like generated
+  essay prose
+- abstract English-to-Indonesian concept transfer that is grammatical but not
+  idiomatic, such as `menyelesaikan niat`
 
 ## Output Style
 
