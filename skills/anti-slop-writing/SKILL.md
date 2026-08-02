@@ -14,6 +14,8 @@ Improve text that sounds machine-made or generically AI-written.
 - reducing stiffness
 - removing generic AI tone
 - tightening repetitive phrasing
+- separate cleanup pass after `general-translation` when a clean
+  translation-only baseline still feels stiff, generic, or too machine-written
 
 ## Core Rules
 
@@ -37,6 +39,9 @@ Improve text that sounds machine-made or generically AI-written.
 - technical terms translated even though the English term is more natural for
   the intended audience
 - mixed English-Indonesian phrasing that feels pasted together
+- em dashes (`—`) used as a generic connector where the target language would
+  naturally use a colon, comma, parentheses, a period, or a restructured
+  sentence
 - precise-looking English terms used for the wrong object, such as `chatbox`
   when the sentence means the `chatbot` experience rather than the UI box
 - staccato manifesto rhythm: short declarative lines that sound profound but do
@@ -84,6 +89,25 @@ Improve text that sounds machine-made or generically AI-written.
   mengulanginya sebanyak yang dibutuhkan`) or cut the slogan
 - `Selama ide masih di kepala, ia terasa indah dan rapuh.` ->
   `Selama masih di kepala, ide bisa tampak mulus karena belum diuji oleh detail.`
+
+## Punctuation
+
+In Indonesian copy, avoid the em dash (`—`) as a default connector. Match the
+replacement to the clause's function:
+
+- colon (`:`) for an explanation, apposition, or example that follows;
+- comma (`,`) or parentheses for a short aside;
+- a period (`.`) and a new sentence for a strong break;
+- semicolon (`;`) only between two independent clauses, not as a general
+  substitute for a dash.
+
+Examples:
+
+- `definisi kerja proyek — definisi yang bisa berubah` ->
+  `definisi kerja proyek: definisi yang bisa berubah`
+- `dua versi — yang lama dan yang baru` ->
+  `dua versi, yang lama dan yang baru`
+- `Dia setuju — tapi dengan syarat.` -> `Dia setuju, tapi dengan syarat.`
 
 ## Final Check
 
