@@ -13,6 +13,9 @@ Translate for meaning, tone, and readability.
 - For locale files and UI dictionaries, use `locale-translation`.
 - For Markdown, MDX, README, and developer docs, use `technical-docs-translation`.
 - For persuasion-heavy product or campaign copy, use `marketing-translation`.
+- Keep this as a translation/adaptation pass. Do not run a broad second-pass
+  anti-slop audit here; use `anti-slop-writing` after translation when the user
+  asks for cleanup or humanization.
 
 ## Use Cases
 
@@ -59,19 +62,9 @@ Translate for meaning, tone, and readability.
 - In Indonesian technical-popular prose, keep the tone mature and readable.
   Avoid over-formal abstract transitions when a natural editorial phrase says
   the same thing.
-- Avoid importing English-thesis phrasing too literally into Indonesian. If a
-  phrase like `completing intentions` becomes `menyelesaikan niat`, rewrite the
-  idea more concretely, such as `mengerjakan tugas` or `menjalankan instruksi`.
-- Watch for dramatic but generic one-line paragraphs. Keep them only when they
-  add voice, not when they merely imitate essay rhythm.
-- Avoid transition scaffolding that sounds like an outline marker. Replace
-  generic pivots such as `Di sinilah...`, `Itulah sebabnya...`, or `Tetapi pola
-  besarnya...` with a concrete observation when the sentence does not add new
-  meaning.
-- In builder/productivity prose, do not let abstract nouns carry the paragraph
-  alone. Terms like `leverage`, `taste`, `jarak ide dan eksekusi`, and `draft
-  pertama` should be grounded in specific work: a file opened, an error read, a
-  draft reviewed, a test run, a scope decision, or a UI/prototype changed.
+- Preserve technical English terms when they are the natural term for the target
+  audience. Translate them only when the target-language term is common and does
+  not sound forced.
 - For product or cultural concepts, choose the term that names the real object,
   not the literal UI part. Example: use `chatbot` for conversational AI products
   such as ChatGPT; use `chatbox` only when specifically referring to the input
@@ -85,12 +78,9 @@ Prefer:
 - `Tap "Continue" to return to your last lesson.`
 - `so you can sign back in without any issues`
 - direct, flowing sentence structure
-- `bahkan sampai sekarang`
-- `jalannya tidak pernah mulus`
 - `dipakai sehari-hari`
 - `chatbot` when the topic is the conversational AI experience
-- `mengerjakan tugas`
-- concrete builder details before broad productivity claims
+- technical English terms that sound normal to the intended audience
 
 Over:
 
@@ -99,12 +89,9 @@ Over:
 - `enter the learning room to continue the last lesson`
 - `so you can sign back in smoothly`
 - accurate but flat sentence structure
-- `bahkan sekarang` when `bahkan sampai sekarang` sounds more natural
-- `perjalanannya tidak lurus`
 - `digunakan dalam kehidupan sehari-hari`
 - `chatbox` when the intended meaning is the chatbot product or experience
-- `menyelesaikan niat`
-- slogan-like productivity claims without a work example
+- forced translations of common technical terms
 
 ## Final Check
 

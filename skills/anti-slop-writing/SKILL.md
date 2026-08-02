@@ -14,6 +14,8 @@ Improve text that sounds machine-made or generically AI-written.
 - reducing stiffness
 - removing generic AI tone
 - tightening repetitive phrasing
+- separate cleanup pass after `general-translation` when a clean
+  translation-only baseline still feels stiff, generic, or too machine-written
 
 ## Core Rules
 
