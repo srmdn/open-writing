@@ -69,14 +69,17 @@ Basic flow:
 
 Quick skill chooser:
 
+Choose by task and content, not by file extension alone.
+
 - everyday prose or chat: `general-translation`
-- Markdown or developer docs: `technical-docs-translation`
+- developer-facing docs or code-sensitive Markdown/MDX:
+  `technical-docs-translation`
 - locale strings or UI copy: `locale-translation`
 - campaigns or CTA-heavy copy: `marketing-translation`
 - spoken on-screen dialogue: `subtitle-translation`
 - religious or reverent material: `religious-content-translation`
 - make writing sound less generic: `anti-slop-writing`
-- inspect translation quality: `translation-review`
+- compare a source with an existing translation: `translation-review`
 
 For examples and practical usage notes, see [docs/end-users/README.md](./docs/end-users/README.md).
 

@@ -21,16 +21,21 @@ Typical flow:
 
 ## Picking The Right Skill
 
+Choose by task and content, not by file extension alone.
+
 Use:
 
-- `general-translation` for everyday prose, articles, chat, and non-technical text
-- `technical-docs-translation` for Markdown, README files, MDX, and developer documentation
+- `general-translation` for everyday prose, articles, chat, and editorial text,
+  including articles stored in Markdown
+- `technical-docs-translation` for README files, API guides, tutorials, and
+  developer-facing Markdown or MDX where code-sensitive structure matters
 - `locale-translation` for JSON/YAML locale files, UI strings, placeholders, and tags
 - `marketing-translation` for persuasive copy, launches, announcements, and CTAs
 - `subtitle-translation` for spoken dialogue meant to be read quickly on screen
 - `religious-content-translation` for religious, devotional, or reverent material
 - `anti-slop-writing` when the goal is to make wording less generic or stiff
-- `translation-review` when the goal is to inspect and improve an existing translation
+- `translation-review` when the goal is to compare a source with an existing
+  translation
 
 ## Prompt Pattern
 
@@ -131,6 +136,12 @@ Target language: English
 
 Review this translation for fidelity, naturalness, and domain fit.
 Point out real issues only, then suggest a better version.
+
+Source text:
+...
+
+Existing translation:
+...
 ```
 
 ## What To Expect
