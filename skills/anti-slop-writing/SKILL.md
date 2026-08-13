@@ -1,11 +1,22 @@
 ---
 name: anti-slop-writing
-description: Use this as a second-pass writing skill to remove AI-sounding prose, translation stiffness, generic rhythm, filler, and predictable wording. Best for humanizing drafts without changing their underlying meaning.
+description: Use this as a second-pass writing skill when no source-text comparison is needed. Removes AI-sounding prose, translation stiffness, generic rhythm, filler, and predictable wording without changing the underlying meaning. Best for humanizing drafts, same-language cleanup, or cleaning a translation after the translation pass. For source-to-translation fidelity review, use translation-review instead.
 ---
 
 # Anti-Slop Writing
 
 Improve text that sounds machine-made or generically AI-written.
+
+## Scope Boundary
+
+- Use this to improve the supplied draft itself, whether it was written in the
+  target language or produced by an earlier translation pass.
+- Do not infer missing source meaning or treat stylistic preference as factual
+  correction.
+- When both source and translation are available and fidelity must be checked,
+  use `translation-review` first.
+- Preserve established project terminology, register, evidence boundaries, and
+  deliberate repetition.
 
 ## Use Cases
 
@@ -39,26 +50,26 @@ Improve text that sounds machine-made or generically AI-written.
 - technical terms translated even though the English term is more natural for
   the intended audience
 - mixed English-Indonesian phrasing that feels pasted together
+- calques that remain stiff after synonym swapping and need the clause or
+  sentence to be restructured
+- noun stacks or adjective-modifier chains that mirror English structure
+- internal workflow labels carried into reader-facing prose
 - em dashes (`—`) used as a generic connector where the target language would
   naturally use a colon, comma, parentheses, a period, or a restructured
   sentence
-- precise-looking English terms used for the wrong object, such as `chatbox`
-  when the sentence means the `chatbot` experience rather than the UI box
 - staccato manifesto rhythm: short declarative lines that sound profound but do
   not add texture (`Itu sudah besar.`, `Tiga kata itu penting.`)
 - repetitive capability ladders (`Ia bisa... Ia bisa... Ia bisa...`) when a
   compressed sentence or grouped list would sound more human
-- pseudo-deep abstraction carried over from English (`menyelesaikan niat`,
-  `titik ketika ceritanya bergeser`) when a concrete phrase is clearer
-- cute metaphors that flatten technical meaning (`model diberi tangan`,
-  `sistem operasi kecil untuk niat manusia`) unless the surrounding prose earns
-  them
+- pseudo-deep abstraction carried over from another language when a concrete
+  phrase is clearer
+- cute metaphors that flatten technical meaning unless the surrounding prose
+  earns them
 - generic transition scaffolding (`Di sinilah...`, `Itulah sebabnya...`,
   `Tetapi pola besarnya...`) when the sentence merely announces structure
   instead of adding a concrete observation
-- builder/productivity abstraction slop: polished concepts such as `leverage`,
-  `taste`, `jarak ide dan eksekusi`, or `ide punya bentuk` repeated without
-  grounding in concrete work, tools, screens, errors, drafts, or decisions
+- ungrounded abstraction: polished concepts repeated without concrete actions,
+  artifacts, decisions, or consequences
 
 ## Useful Rewrite Patterns
 
@@ -68,27 +79,19 @@ Improve text that sounds machine-made or generically AI-written.
 - `Kalimat itu masih terasa berani bahkan sekarang.` ->
   `Kalimat itu masih terasa berani bahkan sampai sekarang.`
 - `Perjalanannya tidak lurus.` -> `Jalannya tidak pernah mulus.`
-- `Jaringan saraf ... kembali menguat` ->
-  `Neural network ... kembali naik daun` when the audience is technical and the
-  English term is more idiomatic
-- `era AI modern dimulai dari chatbox` ->
-  `era AI modern dimulai dari chatbot` when the point is the conversational AI
-  product or interaction pattern
-- `AI bergerak dari menjawab pertanyaan menuju menyelesaikan niat.` ->
-  `AI bergerak dari menjawab pertanyaan menuju mengerjakan tugas.`
-- `Ia bisa membaca file. Ia bisa mencari informasi. Ia bisa menjalankan code.` ->
-  `Model mulai diberi akses ke tool: membaca file, mencari informasi, dan
-  menjalankan code.`
+- `Sistem memeriksa input. Sistem menyimpan hasil. Sistem mengirim notifikasi.`
+  -> `Sistem memeriksa input, menyimpan hasil, dan mengirim notifikasi.`
 - `Itu sudah besar.` -> expand only if it carries a real observation, or cut it
   when it only adds dramatic pause
-- `Di sinilah konsep tool use menjadi penting.` ->
-  `Di titik ini, tool use menjadi pembeda.` or a more specific sentence tied to
-  the surrounding paragraph
-- `Software sejak awal adalah mesin leverage.` ->
-  explain the actual mechanism (`kita menulis instruksi sekali, lalu mesin
-  mengulanginya sebanyak yang dibutuhkan`) or cut the slogan
-- `Selama ide masih di kepala, ia terasa indah dan rapuh.` ->
-  `Selama masih di kepala, ide bisa tampak mulus karena belum diuji oleh detail.`
+- `Di sinilah konsep ini menjadi penting.` -> replace the transition with the
+  concrete observation that makes the concept important
+- `pengalaman belajar atlas` -> `belajar dari atlas` when the noun stack mirrors
+  English rather than natural Indonesian
+- `pertanyaan yang terarah` -> restructure around the action or outcome, such as
+  `mulai dari satu pertanyaan yang bisa dijawab`, when adjective swapping still
+  sounds translated
+- `Audit sumber proyek` -> `Pemeriksaan sumber` when internal workflow wording
+  leaks into public prose and the narrower label preserves the meaning
 
 ## Punctuation
 
@@ -115,5 +118,5 @@ Examples:
 - Does it sound more human, specific, and direct?
 - Is any line still obviously AI-sounding?
 - Is the prose merely polished, or does it actually feel less translated?
-- For Indonesian technical-blog prose, would this sound like it was written
-  directly by an Indonesian developer or editor?
+- Would this sound like it was written directly for the intended audience and
+  project rather than cleaned up from a generic template?

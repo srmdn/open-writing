@@ -92,6 +92,22 @@ occurs.
 - **Revisit when:** The V1 skill set has enough repeated evidence to serve as a
   stable baseline for MCP design.
 
+## D-008: Route by task and content, not file extension
+
+- **Status:** accepted
+- **Decision:** Choose the primary translation skill from the content and task.
+  Treat Markdown, MDX, JSON, and other formats as constraints, not automatic
+  task types. Use `general-translation` for editorial prose stored in Markdown;
+  add structural safeguards from `technical-docs-translation` when fragile
+  frontmatter, links, footnotes, or embedded code require them.
+- **Why:** The same format can contain an essay, developer guide, interface
+  copy, or another task type. Routing from the extension alone applies the
+  wrong terminology and prose behavior.
+- **Trade-off:** Some editorial files need composed behavior: one skill for the
+  prose task and another skill's narrow structural safeguards.
+- **Revisit when:** Composition repeatedly creates conflicting instructions or
+  fails to protect structure reliably.
+
 ## Initial assumptions
 
 - Skills are the current public product surface.

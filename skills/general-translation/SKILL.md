@@ -1,6 +1,6 @@
 ---
 name: general-translation
-description: Use this for general translation between languages when the goal is natural, human-sounding output rather than domain-specific formatting rules. Best for prose, chat, essays, articles, and everyday text. Supports source and target language as runtime parameters.
+description: Use this for general translation between languages when the goal is natural, human-sounding prose rather than domain-specific formatting rules. Best for chat, essays, editorial articles, and everyday text, including prose stored in Markdown when developer-documentation constraints are not the main task. Supports source and target language as runtime parameters.
 ---
 
 # General Translation
@@ -9,9 +9,17 @@ Translate for meaning, tone, and readability.
 
 ## Scope Boundary
 
-- Use this for prose and everyday text that does not have strict runtime or format constraints.
+- Use this for prose and everyday text that does not have strict runtime or
+  code-sensitive constraints.
+- Use it for essays and editorial articles even when the file is Markdown. File
+  extension alone does not make prose technical documentation.
 - For locale files and UI dictionaries, use `locale-translation`.
-- For Markdown, MDX, README, and developer docs, use `technical-docs-translation`.
+- For developer-facing documentation where code, commands, identifiers, or
+  Markdown/MDX structure need special protection, use
+  `technical-docs-translation`.
+- If an editorial article contains fragile frontmatter, links, footnotes, or
+  embedded code, keep this skill for prose behavior and apply the structural
+  safeguards from `technical-docs-translation` as a companion.
 - For persuasion-heavy product or campaign copy, use `marketing-translation`.
 - Keep this as a translation/adaptation pass. Do not run a broad second-pass
   anti-slop audit here; use `anti-slop-writing` after translation when the user
@@ -22,9 +30,10 @@ Translate for meaning, tone, and readability.
 - prose
 - chat
 - articles
+- editorial articles stored in Markdown
 - notes
 - essays
-- general rewriting across languages
+- cross-language adaptation
 
 ## Core Rules
 

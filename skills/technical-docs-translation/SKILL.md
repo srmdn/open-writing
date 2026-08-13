@@ -1,6 +1,6 @@
 ---
 name: technical-docs-translation
-description: Use this for translation or review of technical documentation, README files, Markdown, MDX, tutorials, and developer guides. Preserves code-sensitive structure while keeping the prose natural in the target language.
+description: Use this to translate developer-facing technical documentation such as README files, API guides, tutorials, and Markdown or MDX with code-sensitive structure. Preserves code, commands, identifiers, and document structure while keeping prose natural. Do not use it for ordinary editorial articles merely because they are stored in Markdown.
 ---
 
 # Technical Docs Translation
@@ -9,15 +9,23 @@ Translate developer documentation without breaking code, structure, or terminolo
 
 ## Scope Boundary
 
-- Use this for developer-facing docs where Markdown, MDX, code samples, commands, or framework terms matter.
-- For general prose without code-sensitive structure, use `general-translation`.
+- Use this for developer-facing docs where code samples, commands, identifiers,
+  framework terms, or Markdown/MDX structure need special protection.
+- Treat Markdown and MDX as formats, not automatic triggers. For essays,
+  reporting, and editorial articles without developer-documentation
+  constraints, use `general-translation`.
+- For editorial Markdown with fragile frontmatter, links, footnotes, or embedded
+  code, keep `general-translation` as the prose skill and apply only this
+  skill's structural safeguards as a companion.
 - For app locale files or UI dictionaries, use `locale-translation`.
+- To evaluate an existing source-and-translation pair, compose this skill's
+  structural rules with `translation-review`.
 
 ## Use Cases
 
 - README
-- Markdown
-- MDX
+- code-sensitive Markdown
+- developer-facing MDX
 - framework docs
 - API guides
 - tutorials
