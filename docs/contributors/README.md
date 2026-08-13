@@ -1,6 +1,7 @@
 # Contributor Guide
 
-This guide explains how contributors should design, revise, and validate skills in `open-translation`.
+This guide explains how contributors should design, revise, and validate skills
+in `open-translation`.
 
 ## Project Shape
 
@@ -8,7 +9,8 @@ Current public surface:
 
 - `skills/<skill-name>/SKILL.md`
 
-Future surfaces may include `mcp/`, `web/`, or shared core modules, but contributions should follow the current repo structure unless maintainers expand it.
+Future surfaces may include `mcp/`, `web/`, or shared core modules. Follow the
+current repo structure unless maintainers expand it.
 
 ## What Good Contributions Look Like
 
@@ -23,8 +25,12 @@ Future surfaces may include `mcp/`, `web/`, or shared core modules, but contribu
 
 - Keep each skill focused on one main job.
 - Prefer task-type boundaries over language-pair folder explosion.
+- Choose the primary skill from the task and content, not the file extension.
+- Treat formats such as Markdown, MDX, and JSON as constraints. Compose
+  structural safeguards when needed instead of changing the primary task type.
 - Keep runtime-safety rules in the skills that need them.
-- Put cross-cutting guidance in separate skills instead of copying it into every skill.
+- Put cross-cutting guidance in separate skills instead of copying it into
+  every skill.
 - Use YAML frontmatter with `name` and `description`.
 
 ## Before You Change A Skill
@@ -33,16 +39,20 @@ Check:
 
 - does this conflict with a recorded [project decision](../../DECISIONS.md)?
 - does this belong in an existing skill, or is it a different failure mode?
+- is this a task-type problem or only a format constraint?
 - does this increase overlap with a sibling skill?
 - is this rule public and reusable, or only local/private workflow?
+- has the pattern repeated across representative cases, or is it one project
+  preference?
 
 ## Public Vs Private Material
 
 Public repo content:
 
 - `AGENTS.md`
+- `CONTRIBUTING.md`
+- `DECISIONS.md`
 - `README.md`
-- `docs/contributors/CONTRIBUTING.md`
 - `docs/contributors/README.md`
 - `docs/end-users/README.md`
 - `LICENSE`
@@ -52,11 +62,13 @@ Local-only content:
 
 - `.local/`
 
-Do not add `.local/` files to git. Contributors should not depend on local-only planning or eval notes to understand the public repo.
+Do not add `.local/` files to git. Contributors should not depend on local-only
+planning or eval notes to understand the public repo.
 
 ## Skill Workflow
 
-Treat every new skill and every meaningful skill revision as something that should be evaluated, not just written.
+Evaluate every new skill and every meaningful skill revision. Do not treat the
+instructions alone as proof that the behavior works.
 
 The intended loop is:
 
@@ -65,9 +77,11 @@ The intended loop is:
 3. Re-read sibling skills for overlap.
 4. Make sure the skill still reads cleanly end to end.
 5. Run a small set of representative eval cases.
-6. Record recurring weaknesses.
-7. Revise the skill only when the same weakness appears across multiple cases.
-8. Stop revising when new cases mostly confirm expected behavior instead of exposing new systematic problems.
+6. Record recurring weaknesses and their project or domain context.
+7. Revise the public skill only when the same weakness appears across
+   representative cases.
+8. Stop revising when new cases mostly confirm expected behavior instead of
+   exposing new systematic problems.
 
 For this repo stage, the main goal of evaluation is to answer:
 
@@ -82,7 +96,10 @@ Use this rule of thumb:
 1. Start with a few representative cases, not a huge dataset.
 2. Prefer real examples when possible.
 3. If you are using a local eval workspace, add or update a case or run note.
-4. If a skill is improved but not fully proven stable, mark it as monitored rather than pretending it is finished.
+4. If a skill is improved but not fully proven stable, mark it as monitored
+   rather than pretending it is finished.
+5. Before generalizing project-specific wording, confirm the failure mode on
+   another representative case when practical.
 
 ## Automated validation
 
@@ -98,13 +115,16 @@ GitHub Actions runs the same check for every pull request and change to `main`.
 
 ## Model Notes
 
-Model choice matters for contributors because it changes how well a skill follows instructions, preserves structure, and produces natural translation. Do not assume that results from one strong model automatically generalize to weaker ones.
+Model choice matters because it affects instruction following, structural
+preservation, and translation quality. Do not assume that results from one
+strong model automatically generalize to weaker ones.
 
 Preferred approach:
 
 - think in terms of capability, not one fixed model name
 - record which model was used when running meaningful evals
-- be cautious about declaring a skill solid if it has only been exercised on one high-end model
+- be cautious about declaring a skill solid if it has only been exercised on
+  one high-end model
 
 Recommended capability profile:
 
@@ -116,6 +136,8 @@ Recommended capability profile:
 ## Pull Request Notes
 
 - Explain the problem being fixed.
+- Describe the evidence or repeated failure mode behind the change.
 - Explain why the change belongs in that skill.
 - Mention any overlap or terminology tradeoffs.
+- Mention the validation you ran.
 - Keep PRs small when possible.
