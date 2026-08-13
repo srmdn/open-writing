@@ -48,7 +48,7 @@ That means the intended model is:
 
 - End users: [docs/end-users/README.md](./docs/end-users/README.md)
 - Contributors: [docs/contributors/README.md](./docs/contributors/README.md)
-- Contribution policy: [docs/contributors/CONTRIBUTING.md](./docs/contributors/CONTRIBUTING.md)
+- Contribution policy: [CONTRIBUTING.md](./CONTRIBUTING.md)
 - Project decisions: [DECISIONS.md](./DECISIONS.md)
 
 ## How To Use
@@ -58,7 +58,8 @@ Current reality:
 - this repo ships translation skills
 - it does not yet ship MCP tools or a web app
 
-Today, the main way to use `open-translation` is to apply one skill in an AI agent workflow such as Codex, ChatGPT, or Claude.
+Today, the main way to use `open-translation` is to apply one skill in an AI
+agent workflow such as Codex, ChatGPT, or Claude.
 
 Basic flow:
 
@@ -81,7 +82,8 @@ Choose by task and content, not by file extension alone.
 - make writing sound less generic: `anti-slop-writing`
 - compare a source with an existing translation: `translation-review`
 
-For examples and practical usage notes, see [docs/end-users/README.md](./docs/end-users/README.md).
+For examples and practical usage notes, see
+[docs/end-users/README.md](./docs/end-users/README.md).
 
 ## Repo Layout
 
@@ -90,17 +92,18 @@ skills/
   <skill-name>/
     SKILL.md
 AGENTS.md
+CONTRIBUTING.md
 DECISIONS.md
 docs/
   contributors/
-    CONTRIBUTING.md
     README.md
   end-users/
     README.md
 LICENSE
 ```
 
-Local/private planning and evaluation may exist under `.local/`, but that workspace is optional and not part of the public repo contract.
+Local/private planning and evaluation may exist under `.local/`, but that
+workspace is optional and not part of the public repo contract.
 
 ## Status
 
@@ -119,7 +122,9 @@ Planned later:
 
 ## Contributing
 
-See [docs/contributors/CONTRIBUTING.md](./docs/contributors/CONTRIBUTING.md) for contribution policy and [docs/contributors/README.md](./docs/contributors/README.md) for working process.
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution policy and
+[docs/contributors/README.md](./docs/contributors/README.md) for the working
+process.
 
 Short version:
 

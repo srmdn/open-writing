@@ -23,6 +23,9 @@
 - Prefer a new skill when adding guidance would blur an existing boundary.
 - Keep terminology and safety rules close to the skill that needs them.
 - Treat language direction as runtime input, not a folder-level assumption.
+- Choose the primary skill from the task and content, not the file extension.
+  Treat format as a constraint and compose only the structural safeguards the
+  task needs.
 - Prefer examples over repeated or abstract explanation.
 
 ## Workflow
@@ -34,6 +37,10 @@
 - If present, read `.local/WORKFLOW.md` for maintainer-local execution rules.
 - Refine skills through sample -> score -> finding -> narrow revision.
 - Revise for repeated weaknesses, not isolated wording preferences.
+- Treat skills as living beta behavior definitions that can evolve through real
+  use.
+- Promote a project finding into public guidance only when representative cases
+  show that the failure mode recurs. Keep project-specific preferences local.
 - Keep public changes focused and explain validation in the pull request.
 - Follow `docs/contributors/README.md` for the contribution process.
 
