@@ -1,6 +1,6 @@
 ---
 name: religious-content-translation
-description: Use this for translation or review of religious content where tone, reverence, terminology, and doctrinal sensitivity matter. Best for educational, devotional, editorial, and explanatory religious prose rather than generic UI strings.
+description: Use this for translating religious content where tone, reverence, terminology, and doctrinal sensitivity matter. Best for educational, devotional, editorial, and explanatory religious prose rather than generic UI strings. For source-target quality review, compose this skill with translation-review rather than treating it as a separate review skill.
 ---
 
 # Religious Content Translation
@@ -9,7 +9,8 @@ Translate religious content with accuracy, clarity, and tone sensitivity.
 
 ## Scope Boundary
 
-- Use this for devotional, educational, editorial, or explanatory religious prose where reverence and doctrinal sensitivity matter.
+- Use this when the requested operation is translation and the content is devotional, educational, editorial, or explanatory religious prose where reverence and doctrinal sensitivity matter.
+- For source-target quality review, use `translation-review` and apply this skill's terminology and tone constraints as needed.
 - For generic UI strings or locale dictionaries, use `locale-translation`.
 - For ordinary prose with no religious sensitivity, use `general-translation`.
 
@@ -45,6 +46,7 @@ Translate religious content with accuracy, clarity, and tone sensitivity.
 - inconsistent religious terms
 - overconfident paraphrase
 - literal contemplative phrasing that sounds translated rather than spiritually natural
+- treating domain-sensitive translation guidance as a substitute for source-target review
 
 ## Wording Guidance
 
@@ -71,3 +73,4 @@ Over:
 - Is the meaning faithful?
 - Is the tone appropriate for the source?
 - Are key terms and references consistent?
+- If this is a review task, was `translation-review` used for the actual source-target comparison?
