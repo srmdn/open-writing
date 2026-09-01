@@ -1,9 +1,9 @@
 # Contributing
 
-Thanks for contributing to `open-translation`.
+Thanks for contributing to `open-writing`.
 
 Read the [contributor guide](./docs/contributors/README.md) before changing a
-skill. It explains skill boundaries, evaluation expectations, model
+skill. It explains skill boundaries, routing, evaluation expectations, model
 assumptions, and the public/private workspace split.
 
 ## Before opening a pull request
@@ -11,7 +11,8 @@ assumptions, and the public/private workspace split.
 - Keep the change focused on one reusable problem.
 - Explain the evidence behind the change and why it belongs in the selected
   skill.
-- Mention sibling-skill overlap, terminology tradeoffs, and format constraints.
+- Mention routing impact, sibling-skill overlap, terminology tradeoffs, and
+  format constraints.
 - Keep project-specific preferences out of public guidance unless
   representative cases show that the pattern recurs.
 - Do not commit files from `.local/`.
@@ -22,5 +23,5 @@ assumptions, and the public/private workspace split.
   ```
 
 See [project decisions](./DECISIONS.md) before changing public scope or skill
-architecture. For usage guidance, see the
-[end-user documentation](./docs/end-users/README.md).
+architecture. For skill selection, see [routing](./docs/routing.md). For usage
+guidance, see the [end-user documentation](./docs/end-users/README.md).

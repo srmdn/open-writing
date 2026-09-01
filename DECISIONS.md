@@ -7,7 +7,7 @@ occurs.
 ## D-001: Organize translation behavior by task type
 
 - **Status:** accepted
-- **Decision:** Use task type as the main boundary for skills and future tools.
+- **Decision:** Use task type as the main boundary for translation skills and future tools.
   Treat source and target language as runtime inputs.
 - **Why:** The same translation direction needs different behavior for prose,
   technical docs, locale files, marketing, subtitles, and religious content.
@@ -19,7 +19,7 @@ occurs.
 ## D-002: Benchmark English and Indonesian first
 
 - **Status:** accepted
-- **Decision:** Use English <-> Indonesian as the initial quality benchmark
+- **Decision:** Use English <-> Indonesian as the initial translation quality benchmark
   while keeping skill structure extensible to other languages.
 - **Why:** A narrow benchmark enables deeper evaluation and terminology work
   without hardcoding the language pair into the architecture.
@@ -32,7 +32,7 @@ occurs.
 
 - **Status:** accepted
 - **Decision:** Give each skill one main job and compose reusable skills such as
-  review or anti-slop guidance with domain-specific translation skills.
+  review or anti-slop guidance with primary writing or translation skills.
 - **Why:** Focused skills are easier to trigger, evaluate, revise, and reuse
   than one large mixed-purpose instruction set.
 - **Trade-off:** Some tasks require more than one skill or a deliberate choice
@@ -57,8 +57,8 @@ occurs.
 - **Status:** accepted
 - **Decision:** Treat a skill as a behavior hypothesis. Revise it when evals
   expose a repeated weakness, then run a targeted follow-up.
-- **Why:** Good-looking instructions do not prove that translation output is
-  faithful, natural, safe, or consistent.
+- **Why:** Good-looking instructions do not prove that output is faithful,
+  natural, safe, or consistent.
 - **Trade-off:** Evidence-driven refinement takes longer than editing from
   intuition alone.
 - **Boundary:** Public contributors may use their own representative evidence;
@@ -85,8 +85,8 @@ occurs.
 - **Status:** accepted
 - **Decision:** Build and evaluate the skill layer before implementing MCP or
   web surfaces.
-- **Why:** Later interfaces should expose a proven translation model rather than
-  freeze unstable behavior into APIs or user flows.
+- **Why:** Later interfaces should expose proven writing and translation behavior rather
+  than freeze unstable behavior into APIs or user flows.
 - **Trade-off:** Users rely on agent-driven skill workflows until programmable
   and human-facing interfaces exist.
 - **Revisit when:** The V1 skill set has enough repeated evidence to serve as a
@@ -110,7 +110,7 @@ occurs.
 
 ## D-009: Expand the skill layer beyond translation
 
-- **Status:** accepted
+- **Status:** accepted and validated for V1
 - **Decision:** Treat same-language writing and rewriting as a first-class public
   capability alongside translation. Add focused writing skills when repeated
   evaluation shows a real capability gap instead of stretching translation or
@@ -118,10 +118,13 @@ occurs.
 - **Why:** Same-language editorial rewriting requires decisions about structure,
   headings, information order, voice, and reader progression that translation
   and anti-slop cleanup do not fully cover.
-- **Trade-off:** The current repository name and some public documentation remain
-  translation-centered until the broader writing architecture is evaluated and
-  the project rename is completed deliberately.
-- **Revisit when:** Writing skills remain too narrow to justify a broader project
+- **Outcome:** Representative editorial evaluation exposed and then reduced
+  professionalization bias, over-personalization, training-slide headings,
+  conversational overcorrection, vague wording, and context-insensitive lexical
+  choices. This is sufficient to adopt the broader `open-writing` project scope.
+- **Trade-off:** Writing remains a smaller skill family than translation and
+  should expand only when further evaluation shows a real capability gap.
+- **Revisit when:** Writing skills remain too narrow to justify the broader project
   scope or overlap starts to outweigh the benefit of separate capabilities.
 
 ## D-010: Route by requested operation first
@@ -157,7 +160,6 @@ occurs.
 - Skills are the current public product surface.
 - English <-> Indonesian remains the only translation benchmark with meaningful
   local evaluation coverage.
-- Same-language writing evaluation is being introduced alongside translation
-  evaluation.
+- Same-language writing evaluation now runs alongside translation evaluation.
 - MCP and web interfaces remain future work.
 - Public contributors do not need `.local/` files.

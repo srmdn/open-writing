@@ -1,6 +1,6 @@
 # Contributor Guide
 
-This guide explains how contributors should design, revise, and validate skills in the repository.
+This guide explains how contributors should design, revise, and validate skills in `open-writing`.
 
 ## Project Shape
 
@@ -11,7 +11,7 @@ Current public surface:
 
 Future surfaces may include `mcp/`, `web/`, or shared core modules. Follow the current repo structure unless maintainers expand it.
 
-The project began as translation-focused and is now evaluating a broader `open-writing` scope that includes first-class same-language writing and rewriting.
+The project supports translation alongside first-class same-language writing and rewriting.
 
 ## What Good Contributions Look Like
 

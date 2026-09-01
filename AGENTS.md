@@ -1,11 +1,10 @@
-# AGENTS.md — open-translation
+# AGENTS.md — open-writing
 
 ## Purpose
 
-- Build open translation and writing skills for humans, AI agents, and developers.
+- Build open writing and translation skills for humans, AI agents, and developers.
 - Treat English <-> Indonesian as the first translation quality benchmark.
 - Keep skills focused and compose them by requested operation, content/domain, and constraints.
-- Treat the broader `open-writing` scope as an architecture under evaluation until the repository rename is completed deliberately.
 
 ## Repository structure
 
