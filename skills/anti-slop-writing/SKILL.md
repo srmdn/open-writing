@@ -1,6 +1,6 @@
 ---
 name: anti-slop-writing
-description: Use this as a second-pass writing skill when no source-text comparison is needed. Removes AI-sounding prose, translation stiffness, generic rhythm, filler, predictable wording, and over-professionalized phrasing without changing the underlying meaning. Best for humanizing drafts, same-language cleanup, or cleaning a translation after the primary pass. For substantive article restructuring use editorial-writing first. For source-to-translation fidelity review, use translation-review instead.
+description: Use this as a second-pass writing skill when no source-text comparison is needed. Removes AI-sounding prose, translation stiffness, generic rhythm, filler, predictable wording, over-professionalized phrasing, and unnatural lexical choices without changing the underlying meaning. Best for humanizing drafts, same-language cleanup, or cleaning a translation after the primary pass. For substantive article restructuring use editorial-writing first. For source-to-translation fidelity review, use translation-review instead.
 ---
 
 # Anti-Slop Writing
@@ -25,6 +25,7 @@ Improve text that sounds machine-made or generically AI-written without turning 
 - removing generic AI tone
 - tightening repetitive phrasing
 - cleaning accurate translations that still sound machine-written
+- replacing technically valid but contextually unnatural wording
 
 ## Core Rules
 
@@ -33,8 +34,9 @@ Improve text that sounds machine-made or generically AI-written without turning 
 - Break repetitive rhythm and predictable sentence patterns.
 - Prefer direct phrasing over inflated phrasing.
 - Do not rewrite so aggressively that tone, facts, uncertainty, or evidence boundaries drift.
-- Do not assume that making prose more formal, abstract, symmetrical, or polished makes it more human.
+- Do not assume that making prose more formal, abstract, symmetrical, polished, or personal makes it more human.
 - Preserve useful irregularity when it sounds natural for the writer and audience.
+- Judge word choice in context, not only by whether it is technically or dictionary-correct.
 
 ## Common Problems
 
@@ -47,9 +49,13 @@ Improve text that sounds machine-made or generically AI-written without turning 
 - documentation or handbook voice leaking into editorial prose
 - abstract professional jargon replacing concrete actions or observations
 - training-slide headings that make every section sound like a lesson
+- over-conversational headings added merely to sound human
 - repeated contrast formulas such as `X bukan Y, tetapi Z`
 - manufactured takeaway lines that restate the paragraph without adding information
 - repeated section shapes such as setup -> explanation -> list -> takeaway
+- first-person phrasing added to neutral claims merely to manufacture personality
+- vague conversational placeholders replacing precise nouns
+- technically valid words that sound translated or unnatural in the local context
 - generic product nouns that flatten the sentence
 - correct but dictionary-like Indonesian
 - technical terms translated even though the English term is more natural for the intended audience
@@ -89,6 +95,35 @@ Examples of suspicious phrasing in Indonesian include:
 
 These phrases are not banned. Rewrite or cut them when they merely make the prose sound professionally packaged rather than more precise.
 
+## Over-Personalization
+
+Do not use first person as a generic humanization device.
+
+First person is useful when it communicates firsthand observation, a real action, a decision, or a personal judgment that matters to the article. It is noise when a neutral technical claim is wrapped in `saya`, `menurut saya`, or `buat saya` without changing the evidence or meaning.
+
+Question repeated patterns such as:
+
+- `saya biasanya ...`
+- `saya lebih memilih ...`
+- `saya ingin tahu ...`
+- `menurut saya ...`
+- `buat saya ...`
+
+Keep them only when the writer's role is actually relevant.
+
+## Contextual Word Choice
+
+A sentence can be grammatically correct and technically defensible while still sounding translated.
+
+Check whether a word expresses the intended contrast naturally in the target language. Do not preserve a source-language category mechanically when the local sentence is really making a simpler distinction.
+
+For example:
+
+- `plugin yang sebenarnya sah` can sound like a literal rendering of `legitimate plugin` when the sentence merely means the plugin is not causing the problem;
+- in that context, `plugin yang sebenarnya tidak bermasalah` is more natural and more concrete.
+
+Prefer the phrase that names the real condition in context. Do not swap terminology when the technical distinction itself matters.
+
 ## Heading Check
 
 Do not turn most headings into training-slide commands or polished contrast slogans.
@@ -101,7 +136,22 @@ Patterns to question when repeated:
 - `Nyatakan apa yang terbukti`
 - `Bangun kembali dari ...`
 
-Prefer headings that belong specifically to the article's subject, question, event, or tension. Keep an imperative or contrast heading when it genuinely sounds natural for that piece.
+Also avoid the opposite overcorrection: turning every heading into a conversational question or casual hook merely to sound less formal.
+
+Prefer headings that belong specifically to the article's subject, question, event, or tension. A natural heading can be plain and concrete.
+
+## Precision After Humanization
+
+Do not make wording vaguer while trying to make it more conversational.
+
+Question phrases such as:
+
+- `bagian yang bermasalah`
+- `sesuatu yang perlu diuji`
+- `ada yang salah`
+- `bagian mana yang terkena`
+
+when a concrete noun is already available. Name the endpoint, file, account, rule, evidence, or affected layer when that improves clarity.
 
 ## Useful Rewrite Patterns
 
@@ -109,6 +159,9 @@ Prefer headings that belong specifically to the article's subject, question, eve
 - `platform untuk ...` -> `tempat untuk ...` when the sentence becomes more human and no product nuance is lost
 - abstract explanatory prose -> tighter and more concrete target-language phrasing
 - professional abstraction -> name the actual action, evidence, decision, or consequence
+- technically correct but unnatural wording -> restate the actual contrast or condition in native target-language terms
+- unnecessary first-person wrapper -> keep the factual or technical statement without adding personality framing
+- vague conversational placeholder -> restore the concrete noun when it is known
 - `Kalimat itu masih terasa berani bahkan sekarang.` -> `Kalimat itu masih terasa berani bahkan sampai sekarang.`
 - `Perjalanannya tidak lurus.` -> `Jalannya tidak pernah mulus.`
 - `Sistem memeriksa input. Sistem menyimpan hasil. Sistem mengirim notifikasi.` -> `Sistem memeriksa input, menyimpan hasil, dan mengirim notifikasi.`
@@ -138,7 +191,10 @@ Examples:
 - Does it still mean the same thing?
 - Does it sound more human, specific, and direct?
 - Is any line still obviously AI-sounding?
-- Did cleanup accidentally turn the draft into documentation, a training deck, or generic professional prose?
+- Did cleanup accidentally turn the draft into documentation, a training deck, copywriting, or generic professional prose?
+- Was first person added where the writer's role does not matter?
+- Are any technically correct terms still unnatural in the sentence's actual context?
+- Did conversational cleanup make any wording vague or less precise?
 - Are abstract nouns hiding a simpler concrete statement?
 - Are sentence and section rhythms suspiciously uniform?
 - Is the prose merely polished, or does it actually feel more naturally written?
