@@ -1,6 +1,8 @@
 # End Users
 
-`open-translation` is intended to become a translation toolset for humans and AI users who want output that sounds natural, preserves meaning, and stays structurally safe when format matters.
+`open-translation` is evolving into a broader writing toolset for humans and AI users who want natural output, preserved meaning, and structurally safe handling when format matters.
+
+The current repository name remains `open-translation` while the broader `open-writing` architecture is evaluated.
 
 ## How To Use It Today
 
@@ -12,16 +14,33 @@ Current public repo state:
 
 That means current usage is manual: use these skills inside an AI tool that supports instruction-following well.
 
-Typical flow:
+Start from what you want the model to do:
 
-1. Choose the task type that matches your text.
-2. Provide source text plus source and target language.
-3. Ask the model to use the matching `open-translation` skill.
-4. If quality matters more than speed, run a second pass with `translation-review`.
+1. translation
+2. same-language writing or rewriting
+3. review
+4. cleanup/humanization
+
+Then choose the content/domain skill and any needed structural constraints.
+
+See [../routing.md](../routing.md) for the full routing contract.
 
 ## Picking The Right Skill
 
-Choose by task and content, not by file extension alone.
+### Same-language writing or rewriting
+
+Use:
+
+- `editorial-writing` for articles, essays, explainers, technical-popular writing,
+  opinion pieces, and experience-based long-form prose when structure, headings,
+  flow, voice, or reader progression need substantive work
+
+Optional:
+
+- `anti-slop-writing` after the editorial pass when the result is structurally
+  sound but still feels generic, stiff, over-polished, or AI-sounding
+
+### Translation
 
 Use:
 
@@ -33,13 +52,33 @@ Use:
 - `marketing-translation` for persuasive copy, launches, announcements, and CTAs
 - `subtitle-translation` for spoken dialogue meant to be read quickly on screen
 - `religious-content-translation` for religious, devotional, or reverent material
-- `anti-slop-writing` when the goal is to make wording less generic or stiff
-- `translation-review` when the goal is to compare a source with an existing
-  translation
 
-## Prompt Pattern
+Optional companions:
 
-Use a prompt shape like:
+- `translation-review` when the goal is to compare a source with an existing translation
+- `anti-slop-writing` when an otherwise accurate translation still sounds generic or stiff
+
+### Cleanup only
+
+Use `anti-slop-writing` directly when the wording is already structurally sound and the actual request is only to make it less generic, stiff, translated, over-polished, or AI-sounding.
+
+Do not use it as a substitute for `editorial-writing` when the article still needs substantive editorial work.
+
+## Prompt Patterns
+
+Same-language article rewrite:
+
+```text
+Use the `editorial-writing` skill.
+
+Audience: technical readers
+Goal: improve structure, headings, flow, and voice without changing factual claims.
+
+Rewrite this article:
+...
+```
+
+General translation:
 
 ```text
 Use the `general-translation` skill.
@@ -52,58 +91,7 @@ Translate this text:
 ...
 ```
 
-Add context when useful:
-
-- audience
-- tone
-- domain
-- format constraints
-- terminology that must stay unchanged
-
-## Tool-Specific Setup
-
-Current setup is lightweight and manual. This repo does not yet ship a one-click installer, MCP server, or hosted UI.
-
-### Codex
-
-- Open this repo in your Codex workspace.
-- Read the relevant `skills/<skill-name>/SKILL.md`.
-- Tell Codex to use that skill for your task.
-- Include source text, source language, target language, and any format constraints.
-
-### ChatGPT
-
-- Open the relevant `SKILL.md` file from this repo.
-- Paste or adapt the skill instruction into your chat.
-- Add your source text and translation request below it.
-
-### Claude
-
-- Open the relevant `SKILL.md` file from this repo.
-- Paste or adapt the skill instruction into your conversation.
-- Add task context such as tone, domain, and structural constraints.
-
-### Current Limitation
-
-- usage is manual today
-- exact loading flow depends on your AI tool
-- future MCP and web surfaces should reduce this setup friction
-
-## Examples
-
-General prose:
-
-```text
-Use the `general-translation` skill.
-Source language: English
-Target language: Indonesian
-Tone: natural and warm
-
-Translate:
-"I saved your draft so you can come back to it later."
-```
-
-Technical docs:
+Technical docs translation:
 
 ```text
 Use the `technical-docs-translation` skill.
@@ -115,19 +103,17 @@ Translate this README section:
 ...
 ```
 
-Locale strings:
+Cleanup pass:
 
 ```text
-Use the `locale-translation` skill.
-Source language: English
-Target language: Indonesian
-Keep keys, placeholders, and tags unchanged.
+Use the `anti-slop-writing` skill.
 
-Translate this JSON:
+Keep the meaning and evidence boundaries unchanged.
+Make this draft sound less generic, stiff, and AI-written:
 ...
 ```
 
-Review pass:
+Translation review:
 
 ```text
 Use the `translation-review` skill.
@@ -144,39 +130,58 @@ Existing translation:
 ...
 ```
 
+## Tool-Specific Setup
+
+Current setup is lightweight and manual. This repo does not yet ship a one-click installer, MCP server, or hosted UI.
+
+### Codex
+
+- Open this repo in your Codex workspace.
+- Read `docs/routing.md` when the correct skill is not obvious.
+- Read the relevant `skills/<skill-name>/SKILL.md`.
+- Tell Codex to use that skill for your task.
+- Include task context such as audience, tone, domain, source/target language when translating, and format constraints.
+
+### ChatGPT
+
+- Open `docs/routing.md` when the correct skill is not obvious.
+- Open the relevant `SKILL.md` file from this repo.
+- Paste or adapt the skill instruction into your chat.
+- Add your text and task request below it.
+
+### Claude
+
+- Open `docs/routing.md` when the correct skill is not obvious.
+- Open the relevant `SKILL.md` file from this repo.
+- Paste or adapt the skill instruction into your conversation.
+- Add task context such as tone, domain, and structural constraints.
+
 ## What To Expect
 
 The project is optimized for:
 
-- human-sounding translation
+- human-sounding writing and translation
+- substantive editorial rewriting without flattening writer voice
 - better handling of structure-sensitive content such as locale strings and technical docs
-- task-based behavior instead of one generic translation mode
-
-Current task types include:
-
-- general translation
-- technical docs translation
-- locale translation
-- marketing translation
-- subtitle translation
-- religious content translation
-- anti-slop rewriting
-- translation review
+- task-based behavior instead of one generic writing or translation mode
+- narrow cleanup and review passes that are composed only when useful
 
 ## Quality Expectations
 
-The goal is not just correctness. The goal is output that is:
+The goal is output that is:
 
-- faithful to the source
-- natural in the target language
+- faithful to supported meaning and evidence
+- natural for the intended audience
 - structurally safe when tokens, markup, or code matter
+- specific rather than generically professional
 
 ## Limitations
 
 Quality can still vary depending on:
 
-- the task type
-- the source and target language direction
+- the requested operation
+- the content/domain
+- source and target language direction for translation
 - terminology policy for the domain
 - the model or runtime behind the tool
 
@@ -188,6 +193,8 @@ The repo is still focused on skill design and evaluation rather than a polished 
 
 Planned later:
 
+- evaluate the broader writing architecture
+- rename to `open-writing` if the broader scope holds up in representative use
 - MCP tools
 - web interface
 - broader language coverage
