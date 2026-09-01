@@ -1,8 +1,6 @@
 # End Users
 
-`open-translation` is evolving into a broader writing toolset for humans and AI users who want natural output, preserved meaning, and structurally safe handling when format matters.
-
-The current repository name remains `open-translation` while the broader `open-writing` architecture is evaluated.
+`open-writing` is a writing and translation skill set for humans and AI users who want natural output, preserved meaning, and structurally safe handling when format matters.
 
 ## How To Use It Today
 
@@ -193,8 +191,7 @@ The repo is still focused on skill design and evaluation rather than a polished 
 
 Planned later:
 
-- evaluate the broader writing architecture
-- rename to `open-writing` if the broader scope holds up in representative use
+- expand writing skills only when representative evaluation shows a real capability gap
 - MCP tools
 - web interface
 - broader language coverage
