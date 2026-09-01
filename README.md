@@ -1,10 +1,6 @@
-# open-translation
+# open-writing
 
-Open translation and writing skills for humans, AI agents, and developers.
-
-> The repository is evaluating a broader `open-writing` scope. The current
-> GitHub repository name remains `open-translation` until the writing
-> architecture has been exercised against representative cases.
+Open writing and translation skills for humans, AI agents, and developers.
 
 Initial translation quality target:
 
@@ -20,10 +16,10 @@ The goal is not generic machine translation or generic AI rewriting. The goal is
 
 ## Current Scope
 
-The repo now contains two first-class operation families:
+The repo contains two first-class operation families:
 
-- translation
 - same-language writing and rewriting
+- translation
 
 It also contains narrower companion skills for review and cleanup.
 
@@ -136,8 +132,7 @@ Current state:
 
 Planned later:
 
-- evaluate the broader writing architecture against representative cases
-- rename the repository to `open-writing` if the broader scope holds up in practice
+- expand writing skills only when representative evaluation shows a real capability gap
 - MCP surface
 - web surface
 - broader language coverage
