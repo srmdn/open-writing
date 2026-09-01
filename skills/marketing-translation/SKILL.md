@@ -1,6 +1,6 @@
 ---
 name: marketing-translation
-description: Use this for marketing translation and rewriting, including landing pages, product copy, CTAs, email copy, announcements, and campaigns. Optimizes for persuasive, human-sounding target-language copy without drifting from the source message.
+description: Use this for translating persuasive marketing copy such as landing pages, product copy, CTAs, email copy, announcements, and campaigns. Optimizes for persuasive, human-sounding target-language copy without drifting from the source message. For same-language marketing rewriting, use a dedicated writing skill when one exists rather than treating this translation skill as a general copy editor.
 ---
 
 # Marketing Translation
@@ -9,9 +9,11 @@ Translate marketing copy for impact, not just correctness.
 
 ## Scope Boundary
 
-- Use this for copy meant to persuade, attract, announce, or convert.
+- Use this when the requested operation is translation and the source is meant to persuade, attract, announce, or convert.
+- Do not use this as a general same-language marketing rewrite skill.
 - For ordinary prose without persuasion goals, use `general-translation`.
 - For UI strings and locale dictionaries, use `locale-translation`.
+- If a translated result is accurate but still sounds generic or stiff, use `anti-slop-writing` as a separate cleanup pass when needed.
 
 ## Use Cases
 
@@ -25,7 +27,7 @@ Translate marketing copy for impact, not just correctness.
 ## Core Rules
 
 - Preserve the promise and meaning of the source.
-- Rewrite for natural persuasion in the target language.
+- Rewrite within the translation pass for natural persuasion in the target language; do not expand this into unrelated same-language copy editing.
 - Prefer concise and concrete copy over generic hype.
 - Keep brand names, product names, and fixed claims unchanged.
 - Avoid robotic polish and safe-sounding filler.
@@ -46,6 +48,7 @@ Translate marketing copy for impact, not just correctness.
 - generic AI marketing tone
 - flat CTAs
 - imported product metaphors or verbs that sound translated in the target language
+- drifting from translation into unsupported copywriting or new claims
 
 ## Wording Guidance
 
@@ -72,3 +75,4 @@ Over:
 - Would a native speaker find this persuasive?
 - Does it still match the source claim?
 - Does it sound specific rather than generic?
+- Did the translation pass stay within the source message instead of becoming a new marketing rewrite?
