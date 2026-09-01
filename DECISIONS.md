@@ -108,10 +108,56 @@ occurs.
 - **Revisit when:** Composition repeatedly creates conflicting instructions or
   fails to protect structure reliably.
 
+## D-009: Expand the skill layer beyond translation
+
+- **Status:** accepted
+- **Decision:** Treat same-language writing and rewriting as a first-class public
+  capability alongside translation. Add focused writing skills when repeated
+  evaluation shows a real capability gap instead of stretching translation or
+  cleanup skills beyond their intended jobs.
+- **Why:** Same-language editorial rewriting requires decisions about structure,
+  headings, information order, voice, and reader progression that translation
+  and anti-slop cleanup do not fully cover.
+- **Trade-off:** The current repository name and some public documentation remain
+  translation-centered until the broader writing architecture is evaluated and
+  the project rename is completed deliberately.
+- **Revisit when:** Writing skills remain too narrow to justify a broader project
+  scope or overlap starts to outweigh the benefit of separate capabilities.
+
+## D-010: Route by requested operation first
+
+- **Status:** accepted
+- **Decision:** Route in the order `operation -> content/domain -> constraints`.
+  Determine whether the user wants translation, same-language writing/rewrite,
+  review, or cleanup before choosing a content-specific skill.
+- **Why:** Content type alone cannot distinguish tasks such as translating an
+  article, rewriting the same article, or only removing stiff wording from it.
+- **Trade-off:** Routing documentation must remain explicit enough for agents to
+  distinguish nearby operations without adding a large orchestration layer.
+- **Revisit when:** Operation-first routing creates repeated ambiguity or a more
+  structured routing schema becomes necessary.
+
+## D-011: Separate primary and companion skills
+
+- **Status:** accepted
+- **Decision:** Primary skills perform the user's main transformation. Companion
+  skills perform narrower review or cleanup jobs and should be composed only
+  when needed. Treat `anti-slop-writing` and `translation-review` as companion
+  skills; do not use them as universal fallbacks when a primary skill is
+  missing.
+- **Why:** Using a cleanup skill as a substitute for substantive editorial work
+  encourages over-polishing, scope drift, and model-default professionalization.
+- **Trade-off:** Some requests require a deliberate multi-pass workflow, while
+  simple requests should still use only one skill.
+- **Revisit when:** Companion passes repeatedly undo good primary output or add
+  unnecessary complexity.
+
 ## Initial assumptions
 
 - Skills are the current public product surface.
-- English <-> Indonesian is the only quality benchmark with meaningful local
-  evaluation coverage.
+- English <-> Indonesian remains the only translation benchmark with meaningful
+  local evaluation coverage.
+- Same-language writing evaluation is being introduced alongside translation
+  evaluation.
 - MCP and web interfaces remain future work.
 - Public contributors do not need `.local/` files.
